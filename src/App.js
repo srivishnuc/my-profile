@@ -1,26 +1,46 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import 'typeface-roboto'
+import {
+  createMuiTheme, ThemeProvider,
+} from '@material-ui/core'
+import { grey, purple } from '@material-ui/core/colors';
+import Home from './Container/Home'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const theme = createMuiTheme({
+  palette: {
+    primary: purple,
+    secondary: grey
+  },
+  status: {
+    danger: 'red'
+  }
+})
+
+
+
+
+
+class App extends React.Component {
+
+
+  render() {
+
+    return (
+
+
+
+
+      <ThemeProvider theme={theme}>
+        <Home />
+      </ThemeProvider>
+
+
+
+    )
+  }
+
 }
+
+
 
 export default App;
