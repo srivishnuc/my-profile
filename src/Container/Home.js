@@ -15,15 +15,15 @@ const useStyles = (style) =>
             margin: style.spacing(1)
         },
         large: {
-            width: '150px',
+            width: '140px',
             left: '15%',
-            height: '125px',
+            height: '130px',
             border: '3px',
             borderStyle: 'solid',
             borderColor: 'white',
             '&:hover': {
                 cursor: 'grab',
-                width: '165px',
+                width: '125px',
                 left: '2%'
             }
         },
