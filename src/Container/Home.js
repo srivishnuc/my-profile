@@ -44,20 +44,31 @@ const useStyles = (style) =>
     })
 
 
-const details = { myDetails1: "{Name: 'Sri Vishnu' ,", myDetails2: "Role: 'Web Developer'};" }
+var details = { myDetails1: "{Name: 'Sri Vishnu' ,", myDetails2: "Role: 'Web Developer'};", myDetails3: `Role: 'ERP - Support'};` }
 
 class Home extends React.Component {
 
     constructor() {
         super()
-        this.state = {}
+        this.state = { detailChange: true }
     }
 
 
+    componentDidMount() {
+        this.iterate = setInterval(() => this.changeValue(), 2000)
+    }
+
+    changeValue() {
+
+        this.setState(prevState => ({
+            detailChange: !prevState.detailChange
+        }))
+    }
 
     render() {
 
         const { classes } = this.props
+        const { detailChange } = this.state
 
         return (
 
@@ -74,7 +85,14 @@ class Home extends React.Component {
                     </Grid>
                     <Grid item>
                         <Typography className={classes.header} variant="h3" color="secondary">{details.myDetails1}</Typography>
-                        <Typography className={classes.header} variant="h3" color="primary">{details.myDetails2}</Typography>
+                    </Grid>
+                </Grid>
+                <Grid container
+                    direction="column"
+                    alignContent="center"
+                    justify="center">
+                    <Grid item  >
+                        <Typography className={classes.header} variant="h3" color="primary">{detailChange ? details.myDetails2 : details.myDetails3}</Typography>
                     </Grid>
                 </Grid>
                 <MyLinks />
