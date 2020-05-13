@@ -20,13 +20,13 @@ const useStyles = (style) =>
         },
         mylink1: {
             position: 'fixed',
-            right: '1%',
-            bottom: '25%'
+            bottom: '8%',
+            left: '35%'
         },
         mylink2: {
             position: 'fixed',
-            right: '1%',
-            bottom: '10%'
+            left: '55%',
+            bottom: '8%'
         }
     })
 

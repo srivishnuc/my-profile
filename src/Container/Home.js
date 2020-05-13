@@ -29,6 +29,7 @@ const useStyles = (style) =>
         },
         header: {
             postion: 'static',
+            fontFamily: '"Lucida Console", Courier, monospace',
             '&:hover': {
                 cursor: 'none',
                 fontWeight: 800
