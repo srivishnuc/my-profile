@@ -20,13 +20,13 @@ const useStyles = (style) =>
         },
         mylink1: {
             position: 'fixed',
-            bottom: '8%',
+            bottom: '5%',
             left: '35%'
         },
         mylink2: {
             position: 'fixed',
             left: '55%',
-            bottom: '8%'
+            bottom: '5%'
         }
     })
 
@@ -38,15 +38,15 @@ class MyLinks extends React.Component {
         return (
             <Box>
                 <Box className={classes.mylink1}>
-                    <Tooltip placement="left" title="GitHub/srivishnuc">
-                        <Link color="secondary" href="https://github.com/srivishnuc" target="_blank" rel="noreferrer noopener" >
+                    <Tooltip placement="top" title="GitHub/srivishnuc">
+                        <Link color="textPrimary" href="https://github.com/srivishnuc" target="_blank" rel="noreferrer noopener" >
                             <GitHub className={classes.icon} />
                         </Link>
                     </Tooltip>
                 </Box>
                 <Box className={classes.mylink2}>
-                    <Tooltip placement="left" title="LinkedIn/srivishnu995">
-                        <Link color="secondary" href="https://www.linkedin.com/in/sri-vishnu-c-33a6b79b/" target="_blank" rel="noreferrer noopener" >
+                    <Tooltip placement="top" title="LinkedIn/srivishnu995">
+                        <Link color="textPrimary" href="https://www.linkedin.com/in/sri-vishnu-c-33a6b79b/" target="_blank" rel="noreferrer noopener" >
                             <LinkedIn className={classes.icon} />
                         </Link>
                     </Tooltip>
